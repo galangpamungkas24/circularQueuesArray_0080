@@ -75,5 +75,24 @@ public:
     {
         int FRONT_position = FRONT;
         int REAR_position = REAR;
+
+        // cek apakah antrian kosong
+        if (FRONT == -1)
+        {
+            cout << "Queue is empty\n";
+            return;
+        }
+        cout << "\nElement in te queue are...\n";
+
+        // jika FRONT_position <= REAR_position, terasi dari FRONT hingga REAR
+        if (FRONT_position <= REAR_position)
+        {
+            while (FRONT_position <= REAR_position)
+            {
+                cout << queue_array[FRONT_position] << " ";
+                FRONT_position++;
+            }
+            cout << endl;
+        }
     }
 };
