@@ -1,4 +1,4 @@
- #include <iostream>
+#include <iostream>
 using namespace std;
 
 class Queues
@@ -42,18 +42,18 @@ public:
             else
                 REAR = REAR + 1;
         }
-         queue_array[REAR] = num;
+        queue_array[REAR] = num;
     }
 
     void remove()
-    { 
+    {
         // cek apakah antrian kosong
         if (FRONT == -1)
         {
             cout << "Queue underflow\n";
             return;
         }
-         cout << "\nThe element deeted from the queue is : " << queue_array[FRONT] << "\n";
+        cout << "\nThe element deeted from the queue is : " << queue_array[FRONT] << "\n";
 
         // cek jika antrian hanya memiliki satu elemen
         if (FRONT == REAR)
@@ -63,7 +63,7 @@ public:
         }
         else
         {
-                // jika elemen yang dihapus berada di poisi terakhir, kembali ke awal  array
+            // jika elemen yang dihapus berada di poisi terakhir, kembali ke awal  array
             if (FRONT == max - 1)
                 FRONT = 0;
             else
@@ -71,6 +71,9 @@ public:
         }
     }
 
-
-
-
+    void display()
+    {
+        int FRONT_position = FRONT;
+        int REAR_position = REAR;
+    }
+};
